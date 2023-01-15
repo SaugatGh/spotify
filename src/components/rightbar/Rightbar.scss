@@ -1,0 +1,62 @@
+.rightbar {
+  // background-color: #535353;
+  background-color: #1c1c1c;
+
+  //   background-color: #121212;
+  flex: 2;
+
+  .wrapper {
+    width: 80%;
+    .top {
+      // background-color: white;
+      display: flex;
+      justify-content: space-between;
+
+      .focus {
+        margin-left: 10px;
+        flex: 2.2;
+        h2 {
+          color: white;
+        }
+      }
+
+      .showAll {
+        flex: 0.7;
+
+        h3 {
+          color: white;
+        }
+      }
+    }
+    .music-content {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-left: 20px;
+
+      .box {
+        min-width: 160px;
+        min-height: 250px;
+        object-fit: cover;
+        overflow: hidden;
+        gap: 20px;
+        width: 160px;
+
+
+        // width: fit-content;
+
+        padding: 10px;
+        border: 2px solid black;
+        background-color: #1c1c1c;
+        color: white;
+
+        img {
+          width: 100%;
+          height: 70%;
+        }
+      }
+    }
+  }
+}

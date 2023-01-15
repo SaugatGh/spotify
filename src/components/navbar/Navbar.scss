@@ -1,0 +1,64 @@
+.navbar {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  //   background-color: #535353;
+  background-color: #121212;
+
+  color: white;
+
+  .slider {
+    width: 100%;
+    display: flex;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .right {
+      display: flex;
+
+      gap: 20px;
+      color: #a7a7a7;
+      position: absolute;
+
+      right: 0;
+      margin-right: 20px;
+      .upgrade {
+      }
+
+      .premium {
+      }
+      .download {
+      }
+      .vetical {
+      }
+      .signup {
+        width: 50px;
+        h3 {
+          display: flex;
+        }
+      }
+      .login {
+        display: flex;
+        align-items: center;
+
+        button {
+          background-color: white;
+          color: #000000;
+          font-weight: bold;
+          width: 100px;
+          height: 40px;
+
+          border-radius: 15px;
+          border: none;
+        }
+      }
+    }
+  }
+}

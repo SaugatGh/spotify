@@ -1,7 +1,18 @@
-import React from "react";
+import React  from "react";
+import "./Home.scss";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Rightbar from "../../components/rightbar/Rightbar";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div className="container">
+      <div className="sidebar">
+        <Sidebar />
+      </div>
+      <Rightbar />
+    </div>
+  );
 };
 
 export default Home;
