@@ -1,4 +1,4 @@
-.spotify {
+.spotify-sidebar {
   width: 25vw;
   height: 100vh;
   background-color: black;
@@ -12,7 +12,7 @@
     .logo {
       display: flex;
       align-items: center;
-gap:5px;
+      gap: 5px;
       img {
         height: 50px;
       }

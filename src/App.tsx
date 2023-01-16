@@ -11,11 +11,7 @@ import Signup from "./pages/signup/Signup";
 const Layout = () => {
   return (
     <div>
-      {/* <Navbar /> */}
-      {/* <Sidebar/> */}
       <Outlet />
-      {/* <Home/> */}
-      {/* <Footer /> */}
     </div>
   );
 };

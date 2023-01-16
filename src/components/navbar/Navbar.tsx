@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -20,13 +21,6 @@ const Navbar = () => {
           </div>
         </div>
         <div className="right">
-          {/* <div className="button">Upgrade</div>
-          <div className="profile">
-            <PermIdentityIcon />
-            <h3>SaugatGh</h3>
-            <ArrowDropDownIcon />
-          </div> */}
-
           <div className="premium">
             <h3>Premium</h3>
           </div>
@@ -40,10 +34,17 @@ const Navbar = () => {
             <h3>|</h3>
           </div>
           <div className="signup">
+            <Link to="/signup" className="link">
+
+
             <h3>Signup</h3>
+            </Link>
           </div>
           <div className="login">
+            <Link to="/login">
+
             <button>Log in</button>
+            </Link>
           </div>
         </div>
       </div>

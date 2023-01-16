@@ -8,7 +8,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import DownloadForOfflineSharpIcon from "@mui/icons-material/DownloadForOfflineSharp";
 const Sidebar = () => {
   return (
-    <div className="spotify">
+    <div className="spotify-sidebar">
       <div className="wrapper">
         <div className="logo">
           <img

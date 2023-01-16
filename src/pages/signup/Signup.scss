@@ -5,7 +5,7 @@
 
   justify-content: center;
 
-  .spotify {
+  .spotify-register {
     width: 30%;
     .logo {
       display: flex;
@@ -16,8 +16,12 @@
       img {
         width: 80px;
       }
-      h2 {
-        font-size: 30px;
+      .link {
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 40px;
+        color:black
       }
     }
 

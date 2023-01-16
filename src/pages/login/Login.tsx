@@ -3,16 +3,19 @@ import "./Login.scss";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import AppleIcon from "@mui/icons-material/Apple";
 import GoogleIcon from "@mui/icons-material/Google";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="spotify-container">
-      <div className="spotify">
+      <div className="spotify-login">
         <div className="logo">
           <img
             src="https://i.pinimg.com/originals/8e/05/72/8e0572ca90458519ab7082ff0bb5def6.jpg"
             alt="spotify logo"
           />
-          <h1>Spotify</h1>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <h1>Spotify</h1>
+          </Link>
         </div>
         <hr />
         <div className="login">
@@ -21,7 +24,7 @@ const Login = () => {
             <button className="facebook">
               <span>
                 <FacebookOutlinedIcon />
-              </span>{" "}
+              </span>
               Continue with Facebok
             </button>
             <button className="apple">
@@ -61,7 +64,9 @@ const Login = () => {
           <div className="no-account">
             <hr />
             <h3>Don't have an account?</h3>
-            <button>SIGN UP FOR SPOTIFY</button>
+            <Link to="/signup">
+              <button>SIGN UP FOR SPOTIFY</button>
+            </Link>
           </div>
         </div>
       </div>

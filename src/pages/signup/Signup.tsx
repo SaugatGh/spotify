@@ -2,16 +2,19 @@ import React from "react";
 import "./Signup.scss";
 import GoogleIcon from "@mui/icons-material/Google";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className="signup-container">
-      <div className="spotify">
+      <div className="spotify-register">
         <div className="logo">
           <img
             src="https://i.pinimg.com/originals/8e/05/72/8e0572ca90458519ab7082ff0bb5def6.jpg"
             alt="spotify logo"
           />
-          <h1>Spotify</h1>
+          <Link to="/" className="link">
+            <h1 >Spotify</h1>
+          </Link>
         </div>
         <div className="signup">
           <h1>Sing up for to start listening music for free</h1>
@@ -103,7 +106,7 @@ const Signup = () => {
         <div className="already-user">
           <h5>
             Have an account?
-            <a href="">Log in</a>{" "}
+            <a href="/login">Log in</a>
           </h5>
         </div>
       </div>
