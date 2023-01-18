@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
-import faker from "@faker-js/faker";
+
 import "./Rightbar.scss";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { headingType } from "../../Data";
 import { Button } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Rightbar = () => {
   return (
     <div className="rightbar">

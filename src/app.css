@@ -1,9 +1,4 @@
-.App.dark {
-  background-color: black;
-  color: white;
-}
-
-.App.white {
-  background-color: white;
-  color: black;
+.app {
+  margin: 0;
+  padding: 0;
 }

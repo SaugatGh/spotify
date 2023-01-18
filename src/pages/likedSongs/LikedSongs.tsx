@@ -1,21 +1,20 @@
 import React from "react";
-import "./Home.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Rightbar from "../../components/rightbar/Rightbar";
-
-const Home = () => {
+import "./LikedSongs.scss"
+const LikedSongs = () => {
   return (
-    <div className="container">
-      <div className="sidebar">
+    <div className="likedSongs">
+      <div className="leftbar">
         <Sidebar />
       </div>
 
       <div className="rightbar">
-        <Rightbar />
+        <Navbar />
+        <div className="search">LikedSongs</div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default LikedSongs;

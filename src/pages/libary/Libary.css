@@ -1,0 +1,93 @@
+.libary {
+  display: flex;
+}
+.rightbar {
+  background-color: #121212;
+}
+
+.playlist-navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin: 8px;
+  color: white;
+  flex: 2;
+}
+.left span {
+  cursor: pointer;
+}
+.stack {
+  margin-left: 20px;
+}
+
+.stack button {
+  margin: 5px;
+  color: white;
+  background-color: #121212;
+  height: 40px;
+  width: 70px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5px;
+  gap: 20px;
+}
+.signup {
+  background-color: #121212;
+  color: #a7a7a7;
+}
+.right button {
+  /* height: 40px; */
+  /* width: 70px; */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+  border-radius: 200px;
+}
+.login {
+  height: 50px;
+  width: 100px;
+}
+.playlist {
+  margin-top: 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.icon {
+  height: 100px;
+  color: white;
+}
+
+.playlist button {
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 100px;
+}
+
+.active-btn {
+  background-color: red;
+}
+.inactive-btn {
+  color: blue;
+}
