@@ -10,6 +10,7 @@ import "./app.css";
 import Libary from "./pages/libary/Libary";
 import LikedSongs from "./pages/likedSongs/LikedSongs";
 import CreatePlaylist from "./pages/CreatePlaylist/CreatePlaylist";
+import Navbar from "./components/navbar/Navbar";
 
 const Layout = () => {
   return (
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         path: "/search",
         element: <Search />,
       },
+
       {
         path: "/libary",
         element: <Libary />,

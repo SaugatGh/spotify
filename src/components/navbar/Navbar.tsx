@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="slider">
+    <div className="spotify-navbar">
         <div className="left">
           <div className="leftArrow">
             <span>
@@ -48,7 +47,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -7,9 +7,7 @@ import Rightbar from "../../components/rightbar/Rightbar";
 const Home = () => {
   return (
     <div className="container">
-      <div className="sidebar">
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       <div className="rightbar">
         <Rightbar />

@@ -8,50 +8,16 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
-const data = [
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/1024px-Podcasts_%28iOS%29.svg.png",
-    title: "Podcasts",
-  },
-];
+import { data } from "../../Data";
 
 const Search = () => {
   return (
     <div className="search">
-      <div className="leftbar">
+      <div className="searchLeftbar">
         <Sidebar />
       </div>
-      <div className="rightbar">
-        <div className="navbar">
+      <div className="searchRightbar">
+        <div className="searchNavbar">
           <div className="slider">
             <div className="left">
               <div className="leftArrow">
@@ -65,19 +31,21 @@ const Search = () => {
                 </span>
               </div>
               <div className="searchOption">
-                <button>
-                  <SearchIcon className="icon" />
-                  <input type="text" placeholder="What's on your mind ?" />
-                </button>
+                <SearchIcon className="searchIcon" />
+                <input
+                  type="text"
+                  placeholder="What's on your mind ?"
+                  className="searchInput"
+                />
               </div>
             </div>
-            <div className="right">
-              <div className="signup">
+            <div className="searchRight">
+              <div className="searchSignup">
                 <Link to="/signup" className="link">
                   <h3>Signup</h3>
                 </Link>
               </div>
-              <div className="login">
+              <div className="searchLogin">
                 <Link to="/login">
                   <button>Log in</button>
                 </Link>

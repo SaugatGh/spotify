@@ -19,10 +19,10 @@ const Libary = () => {
 
   return (
     <div className="libary">
-      <div className="leftbar">
+      <div className="libaryLeftbar">
         <Sidebar />
       </div>
-      <div className="rightbar">
+      <div className="libaryRightbar">
         <div className="playlist-navbar">
           <div className="left">
             <div className="leftArrow">
@@ -49,12 +49,12 @@ const Libary = () => {
           </div>
 
           <div className="right">
-            <button className="signup">Signup</button>
-            <button className="login">Log in</button>
+            <button className="libarySignup">Signup</button>
+            <button className="libaryLogin">Log in</button>
           </div>
         </div>
         <div className="playlist">
-          <FontAwesomeIcon icon={faMusic} className="icon" />
+          <FontAwesomeIcon icon={faMusic} className="playlistIcon" />
           <Typography variant="h3">Create your first playlist</Typography>
           <h3>It's easy, we'll help you</h3>
           <button>Create Playlist</button>

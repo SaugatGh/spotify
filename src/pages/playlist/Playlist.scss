@@ -1,0 +1,63 @@
+.playlistId {
+  display: flex;
+  width: 100%;
+
+  .playlistLeftbar {
+    flex: 1;
+  }
+
+  .playlistRightbar {
+    width: 50%;
+    flex: 3;
+    flex-direction: column;
+
+    .playlistNavbar {
+      position: sticky;
+      top: 0;
+    }
+    .playlistSection {
+      .playlistTop {
+        height: 300px;
+        background-color: #2b4d5e;
+        display: flex;
+        img {
+          margin: 40px 0px 0px 20px;
+          height: 250px;
+        }
+        .playlistDesc {
+          margin: 20px 0px 0px 10px;
+          h2 {
+            font-size: 16px;
+          }
+          h1 {
+            font-size: 70px;
+            font-weight: 800;
+          }
+          p {
+            line-height: 0.2;
+            font-size: 16px;
+            font-weight: 800;
+          }
+        }
+      }
+      .playlistBottom {
+        .bottomTop {
+          color: white;
+          background-color: #0d1019;
+
+          .icon {
+            height: 100px;
+            width: 50px;
+            color: green;
+          }
+          .icon2 {
+            margin-left: 20px;
+            color: white;
+            height: 100px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}

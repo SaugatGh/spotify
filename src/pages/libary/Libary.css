@@ -1,19 +1,21 @@
 .libary {
   display: flex;
 }
-.rightbar {
+
+.libaryRightbar {
   background-color: #121212;
+  width: 100%;
 }
 
 .playlist-navbar {
   display: flex;
   justify-content: center;
+  width: 75vw;
 }
 
 .left {
   display: flex;
   align-items: center;
-  padding: 2px;
   margin: 8px;
   color: white;
   flex: 2;
@@ -44,13 +46,11 @@
   margin-right: 5px;
   gap: 20px;
 }
-.signup {
+.libarySignup {
   background-color: #121212;
   color: #a7a7a7;
 }
 .right button {
-  /* height: 40px; */
-  /* width: 70px; */
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -58,12 +58,12 @@
   margin-right: 20px;
   border-radius: 200px;
 }
-.login {
+.libaryLogin {
   height: 50px;
   width: 100px;
 }
 .playlist {
-  margin-top: 100px;
+  height: 100vh;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@
   justify-content: center;
   color: white;
 }
-.icon {
+.playlistIcon {
   height: 100px;
   color: white;
 }

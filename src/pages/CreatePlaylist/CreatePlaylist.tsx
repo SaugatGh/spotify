@@ -9,7 +9,7 @@ const CreatePlaylist = () => {
       <div className="leftbar">
         <Sidebar />
       </div>
-      <div className="rightbar">
+      <div className="createPlaylistRightbar">
         <Navbar />
       </div>
     </div>
