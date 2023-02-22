@@ -8,6 +8,7 @@ import Search from "./pages/search/Search";
 
 import "./app.css";
 import Libary from "./pages/libary/Libary";
+import Recentplayed from "./pages/ShowAll/RecentPlayed.jsx";
 import LikedSongs from "./pages/likedSongs/LikedSongs";
 import CreatePlaylist from "./pages/CreatePlaylist/CreatePlaylist";
 import Navbar from "./components/navbar/Navbar";
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/playlist/:id",
         element: <Playlist />,
+      },
+      {
+        path: "/showAll/recent/",
+        element: <Recentplayed />,
       },
     ],
   },

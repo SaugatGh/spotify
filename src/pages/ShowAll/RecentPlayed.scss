@@ -1,0 +1,14 @@
+.showAll {
+  display: flex;
+
+  .rightbar-showAll {
+    .boxes {
+      display: flex;
+      margin-top: 20px;
+      margin-left: 10px;
+      gap: 20px;
+      flex-wrap: wrap;
+      //   font-display: column;
+    }
+  }
+}

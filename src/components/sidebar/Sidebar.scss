@@ -6,10 +6,13 @@
   position: sticky;
   top: 0;
   left: 0;
+
   .sidebar-wrapper {
     width: 100%;
+
     display: flex;
     flex-direction: column;
+
 
     .logo {
       display: flex;
@@ -78,7 +81,7 @@
         }
         .likedSongs {
           display: flex;
-          // gap: 10px;
+
           align-items: center;
           margin-top: 10px;
           height: 10px;
@@ -90,6 +93,22 @@
           }
         }
       }
+    }
+  }
+}
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .spotify-sidebar {
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    h2,
+    span {
+      display: none;
     }
   }
 }

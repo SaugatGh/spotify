@@ -39,6 +39,24 @@ export const headingType = [
         songTitle: "The weekend songs",
         desc: "Save your tears,blinding lights",
       },
+      {
+        songId: 2,
+        img: "https://e.snmc.io/i/600/s/1070fc193f9b04ed9eeed6700fa77a3a/9570102/the-weeknd-after-hours-cover-art.jpg",
+        songTitle: "The weekend songs",
+        desc: "Save your tears,blinding lights",
+      },
+      {
+        songId: 2,
+        img: "https://e.snmc.io/i/600/s/1070fc193f9b04ed9eeed6700fa77a3a/9570102/the-weeknd-after-hours-cover-art.jpg",
+        songTitle: "The weekend songs",
+        desc: "Save your tears,blinding lights",
+      },
+      {
+        songId: 2,
+        img: "https://e.snmc.io/i/600/s/1070fc193f9b04ed9eeed6700fa77a3a/9570102/the-weeknd-after-hours-cover-art.jpg",
+        songTitle: "The weekend songs",
+        desc: "Save your tears,blinding lights",
+      },
     ],
   },
   {

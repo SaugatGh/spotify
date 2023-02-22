@@ -162,3 +162,14 @@
     }
   }
 }
+
+/* Media queires */
+@media screen and (max-width: 768px) {
+  .spotify-container {
+    width: 100vw;
+
+    .spotify-login{
+      width: 90%;
+    }
+  }
+}

@@ -16,7 +16,9 @@ const Sidebar = () => {
             src="https://t3.gstatic.com/images?q=tbn:ANd9GcQ0m5m7hzNKT5beRD8lkJQrYGVJ4WFzHh3jkDx2VSUp625Bzd58"
             alt="spotify logo"
           />
-          <h2>Spotify</h2>
+          <Link to="/" style={{color:"white",textDecoration:"none"}}>
+            <h2>Spotify</h2>
+          </Link>
         </div>
         <div className="problem">
           <div className="main">

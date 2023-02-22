@@ -9,6 +9,7 @@ import { Stack } from "@mui/system";
 import { Button, Typography } from "@mui/material";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Libary = () => {
   const [active, setActive] = useState(false);
@@ -49,8 +50,12 @@ const Libary = () => {
           </div>
 
           <div className="right">
-            <button className="libarySignup">Signup</button>
-            <button className="libaryLogin">Log in</button>
+            <Link to="/signup">
+              <button className="libarySignup">Signup</button>
+            </Link>
+            <Link to="/login">
+              <button className="libaryLogin">Log in</button>
+            </Link>
           </div>
         </div>
         <div className="playlist">

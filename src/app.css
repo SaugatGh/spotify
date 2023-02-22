@@ -8,3 +8,8 @@ body {
   overflow-x: hidden;
   /* background: red; */
 }
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+  }
+}

@@ -51,3 +51,15 @@
     }
   }
 }
+
+/* Media queires */
+
+@media screen and (max-width:768px){
+  .spotify-navbar{
+
+    h3{
+      display:none;
+    }
+  }
+
+}
