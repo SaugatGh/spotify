@@ -109,7 +109,9 @@ const MusicPlaying = ({ row }) => {
             {["Lyrics", "Queue", "Connect To Tv", "Mute Volume"].map(
               (title, index) => (
                 <Tooltip key={index} title={title} sx={{ color: "white" }}>
-                  <IconButton onClick={index === 3 ? handleVolumeClick : undefined}>
+                  <IconButton
+                    onClick={index === 3 ? handleVolumeClick : undefined}
+                  >
                     {index === 0 && <LyricsIcon />}
                     {index === 1 && <QueueIcon />}
                     {index === 2 && <ConnectedTvIcon />}

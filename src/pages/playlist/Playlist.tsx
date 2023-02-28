@@ -26,20 +26,16 @@ import { rows } from "./CreateData";
 const Playlist = () => {
   const [showMusicPlaying, setShowMusicPlaying] = useState(false);
 
-  const handleClick = () => {
-    setShowMusicPlaying(!showMusicPlaying);
-  };
-
   const [hoveredRow, setHoveredRow] = useState<Row | null>(null);
   const [clickedRow, setClickedRow] = useState<number | null>(null);
   const [selectedRow, setSelectedRow] = useState<Row | null>(null);
 
-  const handleClickRow = (row: Row) => {
+  const handleClick = (row: Row) => {
     setSelectedRow(row);
 
     if (clickedRow === row.sn) {
       setClickedRow(null);
-      setShowMusicPlaying(false);
+      setShowMusicPlaying(!showMusicPlaying);
     } else {
       setClickedRow(row.sn);
       setShowMusicPlaying(true);
@@ -133,8 +129,8 @@ const Playlist = () => {
                         onMouseEnter={() => setHoveredRow(row)}
                         onMouseLeave={() => setHoveredRow(null)}
                         onClick={() => {
-                          handleClickRow(row);
-                          handleClick();
+                          handleClick(row);
+                          // handleClick();
                         }}
                       >
                         <TableCell
