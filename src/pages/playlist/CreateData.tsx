@@ -1,4 +1,21 @@
-export function createData(sn, title, plays, album, icon, img, description) {
+export interface RowData {
+  sn: number;
+  title: string;
+  plays: number;
+  album: string;
+  icon: number;
+  img: string;
+  description: string;
+}
+export function createData(
+  sn: number,
+  title: string,
+  plays: number,
+  album: string,
+  icon: number,
+  img: string,
+  description: string
+): RowData {
   return { sn, title, plays, album, icon, img, description };
 }
 

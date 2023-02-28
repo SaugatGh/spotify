@@ -28,7 +28,7 @@ const TinyText = styled(Typography)({
   letterSpacing: 0.2,
 });
 
-const MusicPlaying = () => {
+const MusicPlaying = ({ row }) => {
   const duration = 200;
 
   const [value, setValue] = useState<number>(30);
@@ -37,7 +37,6 @@ const MusicPlaying = () => {
   const [position, setPosition] = useState(120);
   const [currentSong, setCurrentSong] = useState(null);
   const [pausedSong, setPausedSong] = useState(true);
-
 
   const formatDuration = (value: number) => {
     const minute = Math.floor(value / 60);
@@ -56,6 +55,7 @@ const MusicPlaying = () => {
     setCurrentSong(currentSong);
     setPausedSong(false);
   };
+
   return (
     <div>
       <div className="musicContainer">
@@ -63,10 +63,12 @@ const MusicPlaying = () => {
           <div className="musicInfo">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0vjrm9CFU2dLrnzbgLd3f8pf2ralYe2zYb8DTpln6vz3EOeAyz1DYcTsJtnVPQsVtRo&usqp=CAU"
+              // src={row.img}
               alt=""
             />
             <Box display="flex" flexDirection="column" alignItems="center">
               <Typography variant="body1">Blinding Lights</Typography>
+              <Typography variant="body1">{row.title}</Typography>
               <Typography variant="caption" sx={{ alignItems: "text-start" }}>
                 The Weekend
               </Typography>
@@ -83,9 +85,9 @@ const MusicPlaying = () => {
                 sx={{ color: "white" }}
               >
                 {paused ? (
-                  <PauseIcon fontSize="large" />
-                ) : (
                   <PlayCircleFilledIcon fontSize="large" />
+                ) : (
+                  <PauseIcon fontSize="large" />
                 )}
               </IconButton>
 
@@ -107,7 +109,7 @@ const MusicPlaying = () => {
             {["Lyrics", "Queue", "Connect To Tv", "Mute Volume"].map(
               (title, index) => (
                 <Tooltip key={index} title={title} sx={{ color: "white" }}>
-                  <IconButton onClick={index === 3 ? handleVolumeClick : null}>
+                  <IconButton onClick={index === 3 ? handleVolumeClick : undefined}>
                     {index === 0 && <LyricsIcon />}
                     {index === 1 && <QueueIcon />}
                     {index === 2 && <ConnectedTvIcon />}

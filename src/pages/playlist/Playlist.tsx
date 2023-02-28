@@ -18,6 +18,7 @@ import { Box } from "@mui/system";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from "@mui/icons-material/Pause";
 
 import MusicPlaying from "./MusicPlaying";
 import { rows } from "./CreateData";
@@ -26,12 +27,30 @@ const Playlist = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [showMusicPlaying, setShowMusicPlaying] = useState(false);
 
+  const [selectedRow, setSelectedRow] = useState(null);
+  const [clickedRow, setClickedRow] = useState(null);
 
-
-  const handleClick = () => {
+  const handleClick = (row) => {
     setShowMusicPlaying(!showMusicPlaying);
+
+    setSelectedRow(row);
+
+    if (clickedRow === row.sn) {
+      setClickedRow(null);
+    } else {
+      setClickedRow(row.sn);
+    }
   };
 
+  type Row = {
+    sn: number;
+    img: string;
+    title: string;
+    description: string;
+    plays: number;
+    album: string;
+    icon: number;
+  };
   return (
     <div className="playlistId">
       <div className="playlistLeftbar">
@@ -108,7 +127,7 @@ const Playlist = () => {
                         }}
                         onMouseEnter={() => setHoveredRow(row)}
                         onMouseLeave={() => setHoveredRow(null)}
-                        onClick={handleClick}
+                        onClick={() => handleClick(row)}
                       >
                         <TableCell
                           component="th"
@@ -119,9 +138,15 @@ const Playlist = () => {
                             padding: "5px",
                           }}
                           align="right"
-                          onClick={() => handlePlaySong(row)}
                         >
-                          {hoveredRow === row ? <PlayArrowIcon /> : row.sn}
+                          {clickedRow === row.sn ? (
+                            <PauseIcon fontSize="small" />
+                          ) : hoveredRow === row ? (
+                            <PlayArrowIcon fontSize="small" />
+                          ) : (
+                            // row.sn
+                            (row.sn as Row["sn"])
+                          )}
                         </TableCell>
 
                         <TableCell className="tableCell" align="left">
@@ -152,7 +177,7 @@ const Playlist = () => {
             </Box>
           </div>
 
-          {showMusicPlaying && <MusicPlaying />}
+          {showMusicPlaying && <MusicPlaying row={selectedRow} />}
         </div>
       </div>
     </div>
