@@ -22,8 +22,25 @@ import PauseIcon from "@mui/icons-material/Pause";
 
 import MusicPlaying from "./MusicPlaying";
 import { rows } from "./CreateData";
-
-const Playlist = () => {
+type Row = {
+  sn: number;
+  img: string;
+  title: string;
+  description: string;
+  plays: number;
+  album: string;
+  icon: number;
+};
+type Props = {
+  rows: Row[];
+};
+interface TableRowType {
+  sn: number;
+  img: string;
+  title: string;
+  description: string;
+}
+const Playlist = (props: Props) => {
   const [showMusicPlaying, setShowMusicPlaying] = useState(false);
 
   const [hoveredRow, setHoveredRow] = useState<Row | null>(null);
@@ -40,16 +57,6 @@ const Playlist = () => {
       setClickedRow(row.sn);
       setShowMusicPlaying(true);
     }
-  };
-
-  type Row = {
-    sn: number;
-    img: string;
-    title: string;
-    description: string;
-    plays: number;
-    album: string;
-    icon: number;
   };
 
   return (
@@ -130,7 +137,6 @@ const Playlist = () => {
                         onMouseLeave={() => setHoveredRow(null)}
                         onClick={() => {
                           handleClick(row);
-                          // handleClick();
                         }}
                       >
                         <TableCell
