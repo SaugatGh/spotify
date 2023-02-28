@@ -19,35 +19,14 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
-import styled from "@emotion/styled";
-
 import MusicPlaying from "./MusicPlaying";
-
-function createData(SN, TITLE, PLAYS, ALBUM, ICON) {
-  return { SN, TITLE, PLAYS, ALBUM, ICON };
-}
-
-const rows = [
-  createData(1, "Bad Liar", 159, "Flowers", 4.0),
-  createData(2, "FLOWERS", 159, "Flowers", 4.0),
-  createData(3, "FLOWERS", 159, "Flowers", 4.0),
-  createData(4, "FLOWERS", 159, "Flowers", 4.0),
-  createData(5, "FLOWERS", 159, "Flowers", 4.0),
-  createData(6, "FLOWERS", 159, "Flowers", 4.0),
-  createData(7, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-  createData(8, "FLOWERS", 159, "Flowers", 4.0),
-];
+import { rows } from "./CreateData";
 
 const Playlist = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [showMusicPlaying, setShowMusicPlaying] = useState(false);
+
+
 
   const handleClick = () => {
     setShowMusicPlaying(!showMusicPlaying);
@@ -119,7 +98,7 @@ const Playlist = () => {
                   <TableBody>
                     {rows.map((row) => (
                       <TableRow
-                        key={row.SN}
+                        key={row.sn}
                         sx={{
                           "&:hover": {
                             backgroundColor: "#232c34",
@@ -140,21 +119,30 @@ const Playlist = () => {
                             padding: "5px",
                           }}
                           align="right"
+                          onClick={() => handlePlaySong(row)}
                         >
-                          {hoveredRow === row ? <PlayArrowIcon /> : row.SN}
+                          {hoveredRow === row ? <PlayArrowIcon /> : row.sn}
                         </TableCell>
 
-                        <TableCell align="left" sx={{ color: "white" }}>
-                          {row.TITLE}
+                        <TableCell className="tableCell" align="left">
+                          <img src={row.img} />
+                          <div className="songDescriptionRow">
+                            <Typography className="typography">
+                              {row.title}
+                            </Typography>
+                            <Typography className="typography">
+                              {row.description}
+                            </Typography>
+                          </div>
                         </TableCell>
                         <TableCell align="left" sx={{ color: "white" }}>
-                          {row.PLAYS}
+                          {row.plays}
                         </TableCell>
                         <TableCell align="left" sx={{ color: "white" }}>
-                          {row.ALBUM}
+                          {row.album}
                         </TableCell>
                         <TableCell align="left" sx={{ color: "white" }}>
-                          {row.ICON}
+                          {row.icon}
                         </TableCell>
                       </TableRow>
                     ))}

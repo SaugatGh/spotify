@@ -35,6 +35,9 @@ const MusicPlaying = () => {
   const [paused, setPaused] = useState(false);
   const [muted, setMuted] = useState(false);
   const [position, setPosition] = useState(120);
+  const [currentSong, setCurrentSong] = useState(null);
+  const [pausedSong, setPausedSong] = useState(true);
+
 
   const formatDuration = (value: number) => {
     const minute = Math.floor(value / 60);
@@ -48,6 +51,10 @@ const MusicPlaying = () => {
 
   const handleVolumeClick = () => {
     setMuted(!muted);
+  };
+  const handlePlaySong = () => {
+    setCurrentSong(currentSong);
+    setPausedSong(false);
   };
   return (
     <div>
