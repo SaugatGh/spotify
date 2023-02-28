@@ -24,21 +24,25 @@ import MusicPlaying from "./MusicPlaying";
 import { rows } from "./CreateData";
 
 const Playlist = () => {
-  const [hoveredRow, setHoveredRow] = useState(null);
   const [showMusicPlaying, setShowMusicPlaying] = useState(false);
 
-  const [selectedRow, setSelectedRow] = useState(null);
-  const [clickedRow, setClickedRow] = useState(null);
-
-  const handleClick = (row) => {
+  const handleClick = () => {
     setShowMusicPlaying(!showMusicPlaying);
+  };
 
+  const [hoveredRow, setHoveredRow] = useState<Row | null>(null);
+  const [clickedRow, setClickedRow] = useState<number | null>(null);
+  const [selectedRow, setSelectedRow] = useState<Row | null>(null);
+
+  const handleClickRow = (row: Row) => {
     setSelectedRow(row);
 
     if (clickedRow === row.sn) {
       setClickedRow(null);
+      setShowMusicPlaying(false);
     } else {
       setClickedRow(row.sn);
+      setShowMusicPlaying(true);
     }
   };
 
@@ -51,6 +55,7 @@ const Playlist = () => {
     album: string;
     icon: number;
   };
+
   return (
     <div className="playlistId">
       <div className="playlistLeftbar">
@@ -127,7 +132,10 @@ const Playlist = () => {
                         }}
                         onMouseEnter={() => setHoveredRow(row)}
                         onMouseLeave={() => setHoveredRow(null)}
-                        onClick={() => handleClick(row)}
+                        onClick={() => {
+                          handleClickRow(row);
+                          handleClick();
+                        }}
                       >
                         <TableCell
                           component="th"
@@ -139,13 +147,12 @@ const Playlist = () => {
                           }}
                           align="right"
                         >
-                          {clickedRow === row.sn ? (
+                          {showMusicPlaying && selectedRow?.sn === row.sn ? (
                             <PauseIcon fontSize="small" />
                           ) : hoveredRow === row ? (
                             <PlayArrowIcon fontSize="small" />
                           ) : (
-                            // row.sn
-                            (row.sn as Row["sn"])
+                            row.sn
                           )}
                         </TableCell>
 
