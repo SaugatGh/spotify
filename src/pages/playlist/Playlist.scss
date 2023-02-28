@@ -1,6 +1,8 @@
 .playlistId {
   display: flex;
   width: 100%;
+  position: relative;
+  height: 100%;
 
   .playlistLeftbar {
     flex: 1;
@@ -41,13 +43,20 @@
         }
       }
       .playlistBottom {
+        background-color: #0d1001;
+
         .bottomTop {
           color: white;
           background-color: #0d1019;
 
+          height: 100px;
+          display: flex;
+
+          align-items: center;
           .icon {
-            height: 100px;
-            width: 50px;
+            height: 120px;
+            width: 60px;
+
             color: green;
           }
           .icon2 {
@@ -55,6 +64,49 @@
             color: white;
             height: 100px;
             width: 50px;
+          }
+        }
+      }
+
+      .musicContainer {
+        background-color: #232c34;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px;
+        // position: absolute;
+
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        .musicPlaying {
+          background-color: #232c34;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 999;
+
+          .musicInfo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            img {
+              width: 100px;
+            }
+          }
+          .musicOptions {
+            gap: 10px;
+          }
+          .musicDetails {
+            color: white;
           }
         }
       }

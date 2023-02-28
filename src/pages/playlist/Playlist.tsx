@@ -1,6 +1,4 @@
 import {
-  Button,
-  Grid,
   Paper,
   Table,
   TableBody,
@@ -8,8 +6,9 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
-import React from "react";
+import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./Playlist.scss";
@@ -18,23 +17,42 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Box } from "@mui/system";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+
+import styled from "@emotion/styled";
+
+import MusicPlaying from "./MusicPlaying";
 
 function createData(SN, TITLE, PLAYS, ALBUM, ICON) {
   return { SN, TITLE, PLAYS, ALBUM, ICON };
 }
 
 const rows = [
-  createData(1, "FLOWERS", 159, "Flowers", 4.0),
+  createData(1, "Bad Liar", 159, "Flowers", 4.0),
   createData(2, "FLOWERS", 159, "Flowers", 4.0),
   createData(3, "FLOWERS", 159, "Flowers", 4.0),
   createData(4, "FLOWERS", 159, "Flowers", 4.0),
   createData(5, "FLOWERS", 159, "Flowers", 4.0),
-  createData(5, "FLOWERS", 159, "Flowers", 4.0),
-  createData(5, "FLOWERS", 159, "Flowers", 4.0),
-  createData(5, "FLOWERS", 159, "Flowers", 4.0),
+  createData(6, "FLOWERS", 159, "Flowers", 4.0),
+  createData(7, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
+  createData(8, "FLOWERS", 159, "Flowers", 4.0),
 ];
 
 const Playlist = () => {
+  const [hoveredRow, setHoveredRow] = useState(null);
+  const [showMusicPlaying, setShowMusicPlaying] = useState(false);
+
+  const handleClick = () => {
+    setShowMusicPlaying(!showMusicPlaying);
+  };
+
   return (
     <div className="playlistId">
       <div className="playlistLeftbar">
@@ -68,67 +86,85 @@ const Playlist = () => {
               <FavoriteBorderIcon className="icon2" />
               <MoreHorizIcon className="icon2" />
             </div>
-            <TableContainer
-              component={Paper}
-              sx={{ backgroundColor: "#0d1019" }}
-            >
-              <Table
-                sx={{ minWidth: 650 }}
-                aria-label="simple table"
-                className="table"
+            <Box margin="5px">
+              <TableContainer
+                component={Paper}
+                sx={{ backgroundColor: "#0d1019", height: "50%" }}
               >
-                <TableHead>
-                  <TableRow>
-                    <TableCell sx={{ color: "white" }}>#</TableCell>
-                    <TableCell align="right" sx={{ color: "white" }}>
-                      Title
-                    </TableCell>
-                    <TableCell align="right" sx={{ color: "white" }}>
-                      Plays
-                    </TableCell>
-                    <TableCell align="right" sx={{ color: "white" }}>
-                      Album
-                    </TableCell>
-                    <TableCell align="right" sx={{ color: "white" }}>
-                      <MoreTimeIcon />
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-
-                <TableBody>
-                  {rows.map((row) => (
-                    <TableRow
-                      key={row.SN}
-                      sx={{
-                        "&:last-child td, &:last-child th": { border: 0 },
-                      }}
-                    >
-                      <TableCell
-                        component="th"
-                        scope="row"
-                        sx={{ color: "white" }}
-                      >
-                        {" "}
-                        {row.SN}
-                      </TableCell>
+                <Table
+                  sx={{ minWidth: 650 }}
+                  aria-label="simple table"
+                  className="table"
+                >
+                  <TableHead>
+                    <TableRow>
                       <TableCell align="right" sx={{ color: "white" }}>
-                        {row.TITLE}
+                        #
                       </TableCell>
-                      <TableCell align="right" sx={{ color: "white" }}>
-                        {row.PLAYS}
+                      <TableCell align="left" sx={{ color: "white" }}>
+                        Title
                       </TableCell>
-                      <TableCell align="right" sx={{ color: "white" }}>
-                        {row.ALBUM}
+                      <TableCell align="left" sx={{ color: "white" }}>
+                        Plays
                       </TableCell>
-                      <TableCell align="right" sx={{ color: "white" }}>
-                        {row.ICON}
+                      <TableCell align="left" sx={{ color: "white" }}>
+                        Album
+                      </TableCell>
+                      <TableCell align="left" sx={{ color: "white" }}>
+                        <MoreTimeIcon />
                       </TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
+                  </TableHead>
+
+                  <TableBody>
+                    {rows.map((row) => (
+                      <TableRow
+                        key={row.SN}
+                        sx={{
+                          "&:hover": {
+                            backgroundColor: "#232c34",
+                          },
+                          "&:last-child td, &:last-child th": { border: 0 },
+                          height: "50px",
+                        }}
+                        onMouseEnter={() => setHoveredRow(row)}
+                        onMouseLeave={() => setHoveredRow(null)}
+                        onClick={handleClick}
+                      >
+                        <TableCell
+                          component="th"
+                          scope="row"
+                          sx={{
+                            color: "white",
+                            height: "100%",
+                            padding: "5px",
+                          }}
+                          align="right"
+                        >
+                          {hoveredRow === row ? <PlayArrowIcon /> : row.SN}
+                        </TableCell>
+
+                        <TableCell align="left" sx={{ color: "white" }}>
+                          {row.TITLE}
+                        </TableCell>
+                        <TableCell align="left" sx={{ color: "white" }}>
+                          {row.PLAYS}
+                        </TableCell>
+                        <TableCell align="left" sx={{ color: "white" }}>
+                          {row.ALBUM}
+                        </TableCell>
+                        <TableCell align="left" sx={{ color: "white" }}>
+                          {row.ICON}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
           </div>
+
+          {showMusicPlaying && <MusicPlaying />}
         </div>
       </div>
     </div>

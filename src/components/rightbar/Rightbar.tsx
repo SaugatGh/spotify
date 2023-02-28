@@ -21,8 +21,8 @@ const Rightbar = () => {
                 <h2>{item.title}</h2>
               </div>
               <div className="rightSide">
-                <Link to="/showAll/recent">
-                  <h3>ShowAll</h3>
+                <Link to="/showAll/recent" style={{textDecorationLine:"none"}}>
+                  <h3 >ShowAll</h3>
                 </Link>
               </div>
             </div>
