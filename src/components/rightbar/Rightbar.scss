@@ -1,5 +1,6 @@
 .rightbar-container {
   flex: 2;
+
   .rightNavbar {
     position: sticky;
     top: 0;
@@ -96,12 +97,10 @@
 }
 @media screen and (max-width: 768px) {
   .rightbar-container {
-
-
     .spotify-rightbar {
       h3 {
         display: flex;
-        margin:none;
+        margin: none;
       }
     }
   }

@@ -72,23 +72,23 @@ export const rows = [
   ),
   createData(
     6,
-    "Blinding Lights",
+    "Anime Song",
 
     159,
     "Flowers",
     4.0,
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGo3umFzfZPecDq9phCqsieIk1EUSO8HFaw&usqp=CAU",
-    "The Weekend"
+    "https://images.8tracks.com/cover/i/010/116/953/Anime-Music-Wallpaper-1120x600-5357.jpg?rect=260,0,600,600&q=98&fm=jpg&fit=max",
+    "Anime Songs"
   ),
   createData(
     7,
-    "Blinding Lights",
+    "Samurai Songs",
 
     159,
     "Flowers",
     4.0,
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGo3umFzfZPecDq9phCqsieIk1EUSO8HFaw&usqp=CAU",
-    "The Weekend"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHR_8RhRPsJcinpYxXEFD1ZyuyrZvyidx8Nw&usqp=CAU",
+    "Samurai Shamppo Songs"
   ),
   createData(
     8,
@@ -102,22 +102,22 @@ export const rows = [
   ),
   createData(
     9,
-    "Blinding Lights",
+    "Ecanto",
 
     159,
     "Flowers",
     4.0,
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGo3umFzfZPecDq9phCqsieIk1EUSO8HFaw&usqp=CAU",
-    "The Weekend"
+    "https://m.media-amazon.com/images/M/MV5BZTRlYTcyNzMtYmYyZi00OGMxLWI0YzctMTA3ZmJmNTYxYTc2XkEyXkFqcGdeQXVyMTQzNTA5MzYz._V1_FMjpg_UX1000_.jpg",
+    "Echanto at Hollywood Bowl"
   ),
   createData(
     10,
-    "Blinding Lights",
+    "Dark intro",
 
     159,
     "Flowers",
     4.0,
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGo3umFzfZPecDq9phCqsieIk1EUSO8HFaw&usqp=CAU",
-    "The Weekend"
+    "https://i1.sndcdn.com/artworks-000302377686-mhbjq3-t500x500.jpg",
+    "Dark intro Song SMMR Remix"
   ),
 ];

@@ -126,7 +126,7 @@ const MusicPlaying = ({ row }) => {
                     {index === 1 && <QueueIcon />}
                     {index === 2 && <ConnectedTvIcon />}
                     {index === 3 &&
-                      (muted ? <VolumeDownIcon /> : <VolumeOffIcon />)}
+                      (muted ? <VolumeOffIcon /> : <VolumeDownIcon />)}
                   </IconButton>
                 </Tooltip>
               )

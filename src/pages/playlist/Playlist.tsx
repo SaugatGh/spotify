@@ -22,6 +22,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 
 import MusicPlaying from "./MusicPlaying";
 import { rows } from "./CreateData";
+import ReactAudioPlayer from "react-audio-player";
 type Row = {
   sn: number;
   img: string;
