@@ -133,16 +133,17 @@
           font-size: 16px;
         }
       }
-      button {
-        width: 30%;
-        font-weight: bold;
-        font-size: 16px;
-        height: 40px;
-        padding: 12px;
-        background-color: var(--background-base, #1ed760);
-        border-radius: 10px;
-        cursor: pointer;
-        border: none;
+      .loginButton {
+        button {
+          font-weight: bold;
+          font-size: 16px;
+          height: 40px;
+          padding: 12px;
+          background-color: var(--background-base, #1ed760);
+          border-radius: 10px;
+          cursor: pointer;
+          border: none;
+        }
       }
     }
     .no-account {
@@ -168,7 +169,7 @@
   .spotify-container {
     width: 100vw;
 
-    .spotify-login{
+    .spotify-login {
       width: 90%;
     }
   }

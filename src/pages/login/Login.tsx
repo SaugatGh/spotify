@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.scss";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import AppleIcon from "@mui/icons-material/Apple";
@@ -58,7 +58,12 @@ const Login = () => {
               <input type="checkbox" />
               <label htmlFor="">Remember me?</label>
             </div>
-            <button>LOG IN</button>
+
+            <div className="loginButton">
+              <Link to="/">
+                <button>LOG IN</button>
+              </Link>
+            </div>
           </div>
 
           <div className="no-account">
